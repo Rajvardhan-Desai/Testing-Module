@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Dropdown from "@/components/Dropdown";
+import Image from "next/image";
 
 export default function TestHeader() {
   const [selection, setSelection] = useState({
@@ -45,7 +46,7 @@ export default function TestHeader() {
         <div className="flex flex-col items-center p-4 rounded-lg shadow bg-[#6378fd] w-full md:w-1/2">
           {/* Header Section */}
           <div className="flex items-center justify-center w-full text-center gap-8">
-            <img src="/test-paper.png" alt="test-paper" className="w-14 h-14" />
+            <Image src="/test-paper.png" alt="test-paper" width={70} height={70}/>
             <h1 className="text-3xl rozha-one-bold">चाचणी तयार करा</h1>
           </div>
 

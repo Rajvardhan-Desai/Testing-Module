@@ -1,10 +1,12 @@
+import Image from 'next/image';
+
 export default function QuestionBankHeader() {
   return (
     <div className="bg-[#6378fd] text-white flex flex-col items-center p-4 rounded-lg shadow">
       <div className="flex items-center justify-center w-full text-center gap-8" >
-        <img src="question.svg" alt="test-paper" className="w-25 h-25" />
+        <Image src="/question.svg" alt="test-paper" width={100} height={100} />
         <h1 className="text-3xl rozha-one-bold">प्रश्न संच</h1>
-        <img src="paper.svg" alt="test-paper" className="w-20 h-20" />
+        <Image src="/paper.svg" alt="test-paper" width={80} height={80} />
       </div>
 
       <div className="flex items-center justify-between flex-wrap w-full mt-4 gap-2 no-wrap laila-regular">
