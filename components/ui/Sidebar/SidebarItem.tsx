@@ -2,13 +2,8 @@
 
 import React from "react";
 import Link from "next/link";
+import { SidebarItemProps } from "@/utils/types";
 import { usePathname } from "next/navigation";
-
-interface SidebarItemProps {
-  href: string;
-  ariaLabel: string;
-  icon: React.ReactNode;
-}
 
 const SidebarItem: React.FC<SidebarItemProps> = ({ href, ariaLabel, icon }) => {
   const pathname = usePathname();
