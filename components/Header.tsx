@@ -14,7 +14,7 @@ export default function Header() {
           <p className="text-sm">{session?.user.username}, DETAILS</p>
         </div>
       </div>
-      <Image src="/logout.png" alt="Logout" width={64} height={64} onClick={() => signOut()}/>
+      <Image className="cursor-pointer" src="/logout.png" alt="Logout" width={64} height={64} onClick={() => signOut()}/>
     </div>
   );
 } 
