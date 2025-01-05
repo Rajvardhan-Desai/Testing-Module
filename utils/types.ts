@@ -102,7 +102,6 @@ export interface QuestionProps {
   isSelected: boolean;
   onClick: () => void;
   onDelete?: () => void;
-  
 }
 
 export interface QuestionListProps {
@@ -110,4 +109,5 @@ export interface QuestionListProps {
   selectedQuestionIndex: number;
   onQuestionSelect: (index: number) => void;
   onDeleteQuestion: (index: number) => void;
+
 }

@@ -8,6 +8,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        rozhaOne: ['var(--font-rozha-one)', 'serif'],
+        laila: ['var(--font-laila)', 'serif'],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
