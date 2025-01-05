@@ -36,7 +36,7 @@ export default function QuestionBankHeader() {
     <div className="bg-[#6378fd] text-white flex flex-col items-center p-4 rounded-lg shadow">
       <div className="flex items-center justify-center w-full text-center gap-8">
         <Image src="/question.svg" alt="test-paper" width={100} height={100} />
-        <h1 className="text-3xl rozha-one-bold">प्रश्न संच</h1>
+        <p className="text-6xl font-rozhaOne">प्रश्न संच</p>
         <Image src="/paper.svg" alt="test-paper" width={80} height={80} />
       </div>
 

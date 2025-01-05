@@ -49,7 +49,7 @@ export default function TestHeader() {
               width={70}
               height={70}
             />
-            <h1 className="text-3xl rozha-one-bold">चाचणी तयार करा</h1>
+            <h1 className="text-6xl rozha-one-regular">चाचणी तयार करा</h1>
           </div>
 
           {/* Dropdowns Section */}
@@ -118,7 +118,7 @@ export default function TestHeader() {
           <div className="grid grid-cols-7 gap-4 p-4">
             {/* First Item */}
             <div className="flex items-center">
-              <div className="flex items-center justify-center bg-green-400 w-10 h-10 text-white rounded-full font-bold">
+              <div className="flex items-center justify-center bg-green-400 w-10 h-10 text-white rounded-full font-bold laila-regular">
                 1
               </div>
             </div>
