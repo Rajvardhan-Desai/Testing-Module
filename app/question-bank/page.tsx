@@ -253,7 +253,7 @@ const initialQuestions: QuestionProps[] = [
 ];
 
 const Page = () => {
-  const [selectedQuestionIndex, setSelectedQuestionIndex] = React.useState(0);
+  const [selectedQuestionIndex, setSelectedQuestionIndex] = React.useState<number | null>(null);
   const [questionList, setQuestionList] =
     React.useState<QuestionProps[]>(initialQuestions);
   const [isModalOpen, setIsModalOpen] = React.useState(false);
@@ -273,8 +273,8 @@ const Page = () => {
     // Update selectedQuestionIndex if necessary
     if (selectedQuestionIndex === index) {
       setSelectedQuestionIndex(0);
-    } else if (selectedQuestionIndex > index) {
-      setSelectedQuestionIndex((prev) => prev - 1);
+    } else if (selectedQuestionIndex !== null && selectedQuestionIndex > index) {
+      setSelectedQuestionIndex((prev) => (prev !== null ? prev - 1 : null));
     }
   };
 
@@ -302,14 +302,14 @@ const Page = () => {
     <div className="flex flex-wrap gap-7 px-6 py-6 mt-4 bg-white rounded-3xl border border-black border-solid shadow-lg max-md:px-5 max-md:max-w-full">
       <div className="flex flex-col grow shrink-0 max-md:max-w-full">
         <div
-          className="custom-scrollbar overflow-y-auto h-[656px] pr-2"
+          className="custom-scrollbar overflow-y-auto h-[505px] pr-2"
           style={{
-            maxHeight: "656px", // Ensure consistent height
+            maxHeight: "505px", // Ensure consistent height
           }}
         >
           <QuestionList
             questions={questionList}
-            selectedQuestionIndex={selectedQuestionIndex}
+            selectedQuestionIndex={selectedQuestionIndex ?? 0}
             onQuestionSelect={handleQuestionSelect}
             onDeleteQuestion={handleDeleteQuestion}
           />
