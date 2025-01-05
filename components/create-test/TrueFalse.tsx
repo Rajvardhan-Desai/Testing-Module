@@ -1,24 +1,17 @@
 "use client";
 import React, { useState } from "react";
 
-const MCQComponent = () => {
-  const [options, setOptions] = useState<string[]>([
-    "Option 1",
-    "Option 2",
-    "Option 3",
-    "Option 4",
+const TrueFalseComponent = () => {
+  const [options] = useState<string[]>([
+    "True",
+    "False",
   ]);
-  const [selectedOption, setSelectedOption] = useState<number | null>(null);
+  const [selectedOption, setSelectedOption] = useState<number>(0);
 
   const handleOptionSelect = (index: number) => {
     setSelectedOption(index);
   };
 
-  const handleOptionChange = (index: number, value: string) => {
-    const updatedOptions = [...options];
-    updatedOptions[index] = value;
-    setOptions(updatedOptions);
-  };
 
   // const addOption = () => {
   //   setOptions([...options, `Option ${options.length + 1}`]);
@@ -38,6 +31,7 @@ const MCQComponent = () => {
       {options.map((option, index) => (
         <div key={index} className="flex items-center space-x-3 ">
         <button
+           onClick={() => handleOptionSelect(index)}
          
           className={`flex flex-wrap gap-5 justify-between items-center px-6 py-2.5 max-w-full text-center bg-white rounded-3xl border border-black border-solid shadow-lg w-full max-md:pl-5 max-md:mr-2.5 ${
             selectedOption === index
@@ -46,13 +40,14 @@ const MCQComponent = () => {
           }`}
         >
           {index + 1}.
-          <span className="flex-1">
-            <input
+          <span className="flex-1 text-left text-md">
+            {/* <input
               type="text"
               value={option}
               onChange={(e) => handleOptionChange(index, e.target.value)}
-              className="w-full p-2 border rounded-lg border-gray-300"
-            />
+              className="w-full p-2 border rounded-lg border-gray-300 "
+            /> */}
+            {option}
           </span>
           <span
            onClick={() => handleOptionSelect(index)}
@@ -80,4 +75,4 @@ const MCQComponent = () => {
   );
 };
 
-export default MCQComponent;
+export default TrueFalseComponent;
