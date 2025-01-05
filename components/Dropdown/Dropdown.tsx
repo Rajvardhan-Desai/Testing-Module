@@ -185,7 +185,7 @@ const Dropdown: FC<DropdownProps> = ({
             "hover:bg-blue-50",
             index !== finalOptions.length - 1 && "border-b border-gray-200",
             "px-4 py-2",
-            isAddOptionText && "text-[#0019fb] font-bold"
+            isAddOptionText && "text-[#0019fb] "
           )}
         >
           {option}

@@ -40,7 +40,7 @@ const AddOptionModal: FC<AddOptionModalProps> = ({
           className
         )}
       >
-        <h3 className="text-xl font-bold text-black mb-4 text-center">
+        <h3 className="text-2xl  text-black mb-4 text-center rozha-one-regular">
           {title}
         </h3>
         <input
@@ -78,7 +78,7 @@ const AddOptionModal: FC<AddOptionModalProps> = ({
           {/* Cancel Button */}
           <button
             onClick={handleCancel}
-            className="rounded-full flex items-center justify-center w-11 h-11 shadow-xl shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
+            className="rounded-full flex items-center justify-center w-11 h-11 shadow-[0_4px_4px_rgba(0,0,0,0.25)]"
           >
             <svg
               className="w-10 h-10"
